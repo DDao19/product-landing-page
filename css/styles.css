@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&family=Viaoda+Libre&display=swap");
+
+:root {
+  /*  FONTS  */
+  --heading: "Viaoda Libre", cursive;
+  --regularFont: "Oxygen", sans-serif;
+  /*  FONT COLOR  */
+  --coolGray: #0a0708;
+  --gray: #746c70;
+  /*  BACKGROUND COLOR  */
+  --ivory: #e2ded0;
+  /*  COLOR  */
+  --blueGray: #647c90;
+}
+/* Default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: var(--ivory);
+}
+body {
+  font-family: var(--regularFont);
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  background-color: orange;
+}
+/* Header/Nav Section */
+.header {
+  padding: 1.5rem 3rem; /* You can adjust navbar height by change 1st value */
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header-img {
+  /*setting height and width to keep image same size when screen goes smaller*/
+  max-width: 20rem;
+  height: 100%;
+  margin-left: -1rem; /* moves img left a little*/
+}
+
+#nav-bar ul {
+  display: flex;
+  padding: 1.5rem 3rem;
+}
+#nav-bar li {
+  margin-right: 4rem;
+}
+#nav-bar li a {
+  color: var(--coolGray);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#nav-bar li:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+#nav-bar li a:hover {
+  color: #c44b4f;
+}
+/* SUBSCRIBE SECTION */
+.subscribe {
+  text-align: center;
+  margin: 2rem auto;
+}
+.subscribe input {
+  display: block;
+  padding: 18.5px 14px;
+  margin: 1rem auto;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+.subscribe #email {
+  width: 250px;
+  border: none;
+  border-radius: 3px;
+  font-family: var(--regularFont);
+  letter-spacing: 1px;
+}
+.subscribe #email:focus {
+  outline: 2px solid var(--blueGray);
+}
+.subscribe #submit {
+  background-color: var(--blueGray);
+  font-family: inherit;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  display: block;
+  width: 150px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+#submit:hover {
+  color: white;
+  background-color: #c44b4f;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+/* FEATURE SECTION */
+.featured-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: pink;
+}
+/* got to align icon in center and 20px away from the text */
+.featured-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 85px; /*created a box size container for the icon*/
+  height: 85px;
+  background-color: green;
+}
+.featured-icon i {
+  font-size: 55px;
+  color: #970c10;
+  /*   width: 55px;
+  height: 55px; */
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 775px) {
+  .header {
+    flex-direction: column;
+  }
+  #header-img {
+    margin-left: -3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #nav-bar ul {
+    font-size: 16px;
+  }
+  #nav-bar li {
+    margin-right: 25px;
+  }
+}
